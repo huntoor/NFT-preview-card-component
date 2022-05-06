@@ -19,8 +19,15 @@ body {
   position: relative;
 }
 
-body p {
+body p, 
+body span {
   font-size: 18px;
+}
+@media (max-width: 400px) {
+  body p,
+  body span {
+    font-size: 14px !important;
+  }
 }
 
 .attribution {
@@ -42,12 +49,18 @@ body p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 400px;
 }
+@media (max-width: 400px) {
+  .container {
+    width: 300px;
+  }
+}
+
 
 .card {
   padding: 30px;
   background-color: var(--card-BG);
-  width: 400px;
   border-radius: 20px;
   color: white;
 }
@@ -65,9 +78,9 @@ body p {
   height: 100%;
   background-color: var(--cyan);
   border-radius: 15px;
-  opacity: 0.5;
+  opacity: 0;
+  transition: 0.3s;
   z-index: 1;
-  display: none;
 }
 .card .img::after {
   content: url(../images/icon-view.svg);
@@ -76,12 +89,15 @@ body p {
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  display: none;
+  opacity: 0;
+  transition: 0.4s;
 }
 
-.card .img:hover::after,
 .card .img:hover::before {
-  display: block;
+  opacity: 0.5;
+}
+.card .img:hover::after {
+  opacity: 1;
 }
 
 
@@ -119,13 +135,11 @@ body p {
 .card .details .price span {
   color: var(--cyan);
   font-weight: bold;
-  font-size: 18px;
   margin-left: 5px;
 }
 
 .card .details .timer span {
   color: var(--soft-blue);
-  font-size: 18px;
   position: relative;
 }
 

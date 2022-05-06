@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [My solution](https://github.com/huntoor/NFT-preview-card-component)
-- Live Site URL: [](https://your-live-site-url.com)
+- Live Site URL: [Github Page](https://huntoor.github.io/NFT-preview-card-component/)
 
 ## My process
 

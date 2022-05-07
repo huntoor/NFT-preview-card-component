@@ -15,7 +15,7 @@
 body {
   font-family: 'Outfit', sans-serif;
   background-color: var(--main-BG);
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
 }
 
@@ -26,7 +26,7 @@ body span {
 @media (max-width: 400px) {
   body p,
   body span {
-    font-size: 14px !important;
+    font-size: 14px;
   }
 }
 
